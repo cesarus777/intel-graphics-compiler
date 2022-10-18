@@ -1,10 +1,23 @@
 /*
- * ----------------------------------------------------------------------------
- * "THE BEER-WARE LICENSE" (Revision 42):
- * <ulius.cesarus@gmail.com> wrote this file. As long as you retain this notice
- * you can do whatever you want with this stuff. If we meet some day, and you
- * think this stuff is worth it, you can buy me a beer in return Yuly Tarasov
- * ----------------------------------------------------------------------------
+ * Copyright (C) 2022 Yuly Tarasov <ulius.cesarus@gmail.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
  */
 
 /// GenXPredToSimdCF
@@ -194,7 +207,8 @@ public:
 
   // TODO: need to add algo to verify mask for simdcf region:
   // 1. For each masked op: op mask in submask of region mask;
-  // 2. If there is else block: else mask is opposite to if mask in terms of parent mask;
+  // 2. If there is else block: else mask is opposite to if mask in terms of
+  // parent mask;
   // 3. For each subregion: subregion mask is submask of region mask.
   //
   // SindCFIfRegion is considered verified if each of conditions above are true.
